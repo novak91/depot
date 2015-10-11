@@ -14,7 +14,10 @@
     <div id="columns">
 
       <div id="side">
-	  <p>It is now <%= @time %></p>
+	  <p>It is now <%= $time %></p>
+	  <% if @session_count %>
+	  <p><%= pluralize(@session_count, "page load") %></p>
+	  <% end %>
 	<ul>
 	  <li><a href="http://www....">Home</a></li>
 	  <li><a href="http://www..../faq">Questions</a></li>
