@@ -14,7 +14,12 @@
     <div id="columns">
 
       <div id="side">
-	  <p>It is now <%= $time %></p>
+	<% if @cart %>
+	 <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+	  <%= render @cart %>
+	 <% end %>
+	<% end %>
+	<p>It is now <%= $time %></p>
 	  <% if @session_count %>
 	  <p><%= pluralize(@session_count, "page load") %></p>
 	  <% end %>
