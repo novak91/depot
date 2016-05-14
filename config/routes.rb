@@ -34,6 +34,12 @@ Depot::Application.routes.draw do
   #     end
   #   end
 
+  resources :line_items do
+    member do
+      post 'decrement'
+    end
+  end
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
