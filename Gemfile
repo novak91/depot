@@ -44,3 +44,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Rails ERD to create database diagramms
+gem 'rails-erd'
